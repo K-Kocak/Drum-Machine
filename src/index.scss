@@ -1,0 +1,93 @@
+$backgroundColor: #FC8572;
+$innerContainerOutlineColor: red;
+$innerContainerColor: #72E9FC;
+$drumPadButtonHover: orange;
+$displayBackgroundColor: #2B628C;
+$h1textcolor: #100B21;
+$h1bgcolor: #FC725C;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: $backgroundColor;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.inner-container {
+	position: relative;
+	text-align: center;
+	width: 300px;
+	height: 400px;
+	border-radius: 5px;
+	outline: 5px solid $innerContainerOutlineColor;
+	background-color: $innerContainerColor;
+	
+	h1 {
+		position: absolute;
+		top: -60px;
+		color: $h1textcolor;
+		background-color: $h1bgcolor;
+		border-radius: 20px;
+		font-weight: 800;
+		font-size: 2.5rem;
+		width: 100%;
+	}
+	
+	.pad-bank {
+		width: 270px;
+		display: inline-block;
+		margin: 5px;
+		margin-top: 7px;
+		align-items: center;
+		justify-content: center;
+		
+		
+		.drum-pad {
+			border-radius: 10px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			float: left;
+			width: 80px;
+			height: 80px;
+			cursor: pointer;
+			background-color: #3C88C3;
+			margin: 3px;
+			margin-left: 6px;
+			font-weight: 800;
+			font-size: 2rem;
+		}
+		
+		.drum-pad:hover {
+			background-color: $drumPadButtonHover;
+		}
+	}
+	
+	.controls-container {
+		width: 65%;
+		height: 20%;
+		display: inline-block;
+		background-color: $displayBackgroundColor;
+		margin-top: 20px;
+		align-items: center;
+		justify-content: center;
+		
+		#display {
+			background-color: $displayBackgroundColor;
+			display: grid block;
+			align-items: center;
+			justify-content: center;
+			padding-top: 20px;
+			font-weight: 800;
+			font-size: 2rem;
+		}
+		
+	}
+}
